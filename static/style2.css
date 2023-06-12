@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navhead {
+    background: rgb(253, 253, 253);
+    position: sticky;
+}
+
+.navtext {
+    color: rgb(54, 54, 133);
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.anchor {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+}
+
+.logo {
+    width: 50px;
+    margin-top: 8px;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 420px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    height: 600px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    animation: animate 30s ease-in-out 3s infinite alternate-reverse forwards;
+    background: url("../static/pics/pic3.jpg")no-repeat center center/cover;
+}
+
+@keyframes animate {
+    0% {
+        background: url("../static/pics/pic2.jpeg")no-repeat center center/cover;
+    }
+    50% {
+        background: url("../static/pics/pic3.jpg")no-repeat center center/cover;
+    }
+    100% {
+        background: url("../static/pics/pic2.jpeg")no-repeat center center/cover;
+    }
+}
+
+.roomtext {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: black;
+}
+
+.testhead {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+    color: black;
+}
+
+.photo {
+    background: url("../static/pics/picb.jpg")no-repeat center center/cover;
+}
+
+.photo1 {
+    margin-top: 25px;
+    background: url("../static/pics/grey.jpg")no-repeat center center/cover;
+}
+
+.bckg {
+    background: rgb(54, 54, 133);
+    border-radius: 0%;
+}

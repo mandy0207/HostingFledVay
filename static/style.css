@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navhead {
+    background: rgb(253, 253, 253);
+    position: sticky;
+}
+
+.navtext {
+    color: rgb(54, 54, 133);
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+
+/* body::before {
+    content: "";
+    position: absolute;
+    background: url('../static/pics/pic3.jpg') no-repeat center center/cover;
+    height: 600px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    animation: animate 30s ease-in-out 3s infinite alternate-reverse forwards;
+    background: url("../static/pics/pic3.jpg")no-repeat center center/cover;
+} */
+
+@keyframes animate {
+    0% {
+        background: url("../static/pics/pic4.jpg")no-repeat center center/cover;
+    }
+    25% {
+        background: url("../static/pics/pic2.jpeg")no-repeat center center/cover;
+    }
+    50% {
+        background: url("../static/pics/pic3.jpg")no-repeat center center/cover;
+    }
+    75% {
+        background: url("../static/pics/pic8.jpg")no-repeat center center/cover;
+    }
+    100% {
+        background: url("../static/pics/pic0.jpg")no-repeat center center/cover;
+    }
+}
+
+.anchor {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+}
+
+.anchor:hover {
+    color: rgb(54, 54, 133);
+}
+
+.logo {
+    width: 50px;
+    margin-top: 8px;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 420px;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 12px -24px 20px black;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    /* background: url('food3.jpg') no-repeat center center/cover; */
+    background: url('../static/pics/pic3.jpg') no-repeat center center/cover;
+    height: 600px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    animation: animate 30s ease-in-out 3s infinite alternate-reverse forwards;
+    background: url("../static/pics/pic3.jpg")no-repeat center center/cover;
+}
+
+
+/* Css for Hotel search form */
+
+.section {
+    position: relative;
+    height: 15vh;
+}
+
+.section .section-center {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#booking {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.booking-form {
+    background: #fff;
+    -webkit-box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(60, 64, 101, 0.1);
+}
+
+.booking-form>form .row.no-margin {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.booking-form>form .row.no-margin>[class*="col-"] {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.booking-form .form-header {
+    padding: 15px 10px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+.booking-form .form-header h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    display: inline-block;
+    font-size: 52px;
+    color: black;
+}
+
+.booking-form .form-group {
+    position: relative;
+    height: 110px;
+    padding: 15px 10px;
+    margin-bottom: 0px;
+}
+
+.booking-form .form-control {
+    font-family: 'Alegreya', serif;
+    background-color: transparent;
+    border-radius: 0px;
+    border: 1px groove #77cdff;
+    border-radius: 5px;
+    height: 50px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0;
+    font-size: 25px;
+    color: #3c404a;
+    font-weight: 700;
+}
+
+.booking-form select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.booking-form select.form-control+.select-arrow {
+    position: absolute;
+    right: 0px;
+    bottom: 20px;
+    width: 32px;
+    line-height: 32px;
+    height: 32px;
+    text-align: center;
+    pointer-events: none;
+    color: #818390;
+    font-size: 12px;
+}
+
+.booking-form select.form-control+.select-arrow:after {
+    content: '\279C';
+    display: block;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.booking-form .form-label {
+    color: #818390;
+    display: block;
+    font-weight: 400;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.booking-form .form-btn {
+    padding: 15px 10px;
+    height: 110px;
+}
+
+.booking-form .submit-btn {
+    margin-top: 40px;
+    background: rgb(54, 54, 133);
+    color: whitesmoke;
+    border: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.form-group>input::placeholder {
+    padding-left: 10px;
+}
+
+.box {
+    /* border: 2px solid red; */
+    height: 500px;
+    width: 100%;
+    display: flex;
+}
+
+.box1 {
+    /* border: 2px solid black; */
+    height: 500px;
+    width: 30%;
+    margin-left: 40px;
+    background: url('../static/pics/beach.jpg') no-repeat center center/cover;
+}
+
+.box2 {
+    margin: auto;
+    /* border: 2px solid black; */
+    height: 500px;
+    width: 40%;
+    margin-left: 200px;
+    padding: 10px 10px;
+}
+
+.heading {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+    margin-top: 80px;
+}
+
+.para {
+    margin-top: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+.btn {
+    background: rgb(54, 54, 133);
+    margin-top: 20px;
+    margin-left: 160px;
+    padding: 4px 4px;
+    height: 60px;
+    width: 150px;
+    color: white;
+    border-radius: 0%;
+}
+
+.roomtext {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: black;
+}
+
+.testhead {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+    color: black;
+}
+
+.photo {
+    background: url("../static/pics/picb.jpg")no-repeat center center/cover;
+}
+
+.photo1 {
+    margin-top: 25px;
+    background: url("../static/pics/grey.jpg")no-repeat center center/cover;
+}
+
+.bckg {
+    background: rgb(54, 54, 133);
+    border-radius: 0%;
+}
+
+
+/* Css for Drop down */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdowntext {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdowntext:hover {
+    color: rgb(54, 54, 133);
+}
+
+.bckg {
+    background: rgb(54, 54, 133);
+    border-radius: 0%;
+    margin-top: 4px;
+    padding: 2px 20px;
+    color: white;
+}
+
+.photo3 {
+    background: rgb(190, 190, 240);
+}

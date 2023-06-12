@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style3.css">
+
+    <title>Hotel Details</title>
+</head>
+
+<style>
+    .popo {
+        margin-left: 85px;
+        margin-top: 50px;
+    }
+    
+    .map-container-3 {
+        overflow: hidden;
+        padding-bottom: 10%;
+        position: relative;
+    }
+    
+    .review {
+        margin-left: 315px;
+        color: rgb(54, 54, 133);
+        font-size: large;
+        font-weight: bold;
+    }
+    
+    .rating {
+        margin-left: 8px;
+        color: rgb(54, 54, 133);
+        font-size: larger;
+        font-weight: 500;
+    }
+</style>
+
+<body>
+    <header class="text-gray-600 body-font navhead">
+        <div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-3 md:mb-0">
+                <img class="logo" src="../static/pics/logo.png" alt="logo">
+                <span class="ml-3 text-xl anchor">FledVay</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a class="mr-12 text-black anchor" href="home">Home</a>
+                <a class="mr-12 text-black anchor" href="about">About</a>
+                <a class="mr-12 text-black anchor" href="tracking">Booking</a>
+                <a class="mr-12 text-black anchor" href="rooms">Rooms</a>
+                <a class="mr-12 text-black anchor">Pages</a>
+                <a class="mr-12 text-black anchor" href="contact">Contact</a>
+                <div class="dropdown">
+                    <a href="home" class="mr-12 text-black anchor">Register</a>
+                    <div class="dropdown-content">
+                        <a href="Signup" class=" mr-12 dropdowntext text-black anchor">Signup</a>
+                        <a href="Login" class="mr-12 dropdowntext text-black anchor">Login</a>
+                    </div>
+
+                </div>
+
+            </nav>
+
+        </div>
+    </header>
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-10 mx-auto flex flex-wrap">
+
+            <div class="flex flex-wrap md:-m-2 -m-1">
+                <div class="flex flex-wrap w-1/2">
+
+                    <div class="md:p-2 p-1 w-full">
+                        <img alt="gallery" src="<%= image %>" class="w-full h-60 object-cover object-center block" id="dynamicImage">
+                    </div>
+                    <!-- <script>
+                        let address = localStorage.getItem("imagepath");
+                        let link = document.querySelector('#dynamicImage');
+                        link.setAttribute('src', address)
+                    </script> -->
+                </div>
+                <div class="flex flex-wrap w-1/2">
+                    <div class="md:p-2 p-1 w-full">
+                        <img alt="gallery" class="w-full h-60 object-cover object-center block" src="../static/pics/Hardcoded.jpg">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-3 py-1 mx-auto">
+            <div class="lg:w-4/5 mx-16 flex flex-wrap">
+                <div class="lg:w-1/2 w-10 lg:pr-10 lg:py-1 mb-6 lg:mb-0">
+
+                    <h1 class="text-gray-900 text-3xl title-font font-medium mb-4" id="HotelName" name='HotelName'>
+                        <%= name %>
+                    </h1>
+
+                    <script>
+                        let hotel = document.getElementById("HotelName").innerHTML;
+                        localStorage.setItem("hotel", hotel);
+                    </script>
+
+                    <div>
+
+                        <div class="flex mb-4">
+                            <span class="flex items-center">
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                              </svg>
+                            </span>
+                            <span class="rating"> <%= Average %>/5 </span>
+                            <span>
+                                <a href="Reviews" target="_blank" class="review text-black" id="reviews">Reviews</a>    
+                            </span>
+
+                        </div>
+
+
+                        <div class="flex border-t border-black py-2">
+                            <span class="roomtext">City</span>
+                            <span class="ml-auto text-gray-900" id="city"><%= destination %></span>
+                        </div>
+                        <!-- <script>
+                            document.getElementById("city").innerHTML = localStorage.getItem("place");
+                        </script> -->
+                        <div class="flex border-t border-black py-2">
+                            <span class="roomtext">Services</span>
+                            <span class="ml-auto text-gray-900">Breakfast, Free Wifi</span>
+                        </div>
+                        <div class="flex border-t border-b mb-6 border-black py-2">
+                            <span class="roomtext">Address</span>
+                            <span class="ml-auto text-gray-900" id="address"><%= address %></span>
+                        </div>
+                        <script>
+                            document.getElementById("address").innerHTML = localStorage.getItem("address");
+                        </script>
+                        <div class="flex">
+                            <span class="title-font font-medium text-2xl text-gray-900" id="price"></span>
+
+
+
+                            <a href="#bottom" class="flex ml-auto text-white bckg border-0 py-1 px-3 focus:outline-none ">Reserve a Room</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="map-container-google-3" class="z-depth-1-half map-container-3 popo">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.5323342015945!2d-73.57796498504844!3d45.49936153911858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a4199642f1b%3A0xece8b88413e6aae!2sDrummond%20St%2C%20Montreal%2C%20QC!5e0!3m2!1sen!2sca!4v1620190787215!5m2!1sen!2sca"
+                        height="230" width="410"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-gray-600 body-font">
+        <form action="/Roominfo" method="post">
+            <div class="container px-5 py-24 mx-auto" id="bottom">
+                <div class="flex flex-wrap -m-4">
+
+                    <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../static/pics/b1.jpg">
+                        </a>
+                        <div class="mt-4">
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1">Balcony, Lake View</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Double Room</h2>
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1 my-1">2 Queen Bed</h3>
+                            <p class="mt-1 roomtext">Rs 5000</p>
+                            <input type="submit" class="lckg text-white details" value="See Detail">
+                        </div>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../static/pics/b2.jpg">
+                        </a>
+                        <div class="mt-4">
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1">Spa, Balcony</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Premium Room</h2>
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1 my-1">1 Queen Bed</h3>
+                            <p class="mt-1 roomtext">RS 5500</p>
+                            <input type="submit" class="lckg text-white details" value="See Detail">
+                        </div>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../static/pics/b4.jpg">
+                        </a>
+                        <div class="mt-4">
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1">Balcony, Lake View</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Budget Room</h2>
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1 my-1">1 King Bed</h3>
+                            <p class="mt-1 roomtext">Rs 6000</p>
+                            <input type="submit" class="lckg text-white details" value="See Detail">
+                        </div>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../static/pics/b5.jpg">
+                        </a>
+                        <div class="mt-4">
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1">Pool, Lake View</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Luxury Room</h2>
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1 my-1">2 King Bed</h3>
+                            <p class="mt-1 roomtext">Rs 6500</p>
+                            <input type="submit" class="lckg text-white details" value="See Detail">
+                        </div>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../static/pics/b6.jpg">
+                        </a>
+                        <div class="mt-4">
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1">Balcony, Lake View</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Luxury Room 2</h2>
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1 my-1">2 Queen Bed</h3>
+                            <p class="mt-1 roomtext">Rs 10000</p>
+                            <input type="submit" class="lckg text-white details" value="See Detail">
+                        </div>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../static/pics/b7.jpg">
+                        </a>
+                        <div class="mt-4">
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1">Balcony, Gym</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Double Room 2</h2>
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1 my-1">1 Double Bed</h3>
+                            <p class="mt-1 roomtext">Rs 4500</p>
+                            <input type="submit" class="lckg text-white details" value="See Detail">
+                        </div>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../static/pics/b8.jpg">
+                        </a>
+                        <div class="mt-4">
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1">Spa, Lake View</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Premium Room 2</h2>
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1 my-1">2 Double Bed</h3>
+                            <p class="mt-1 roomtext">Rs 5300</p>
+                            <input type="submit" class="lckg text-white details" value="See Detail">
+                        </div>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../static/pics/b9.jpg">
+                        </a>
+                        <div class="mt-4">
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1">Balcony,Lake View</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Budget Room 2</h2>
+                            <h3 class="roomtext text-xs tracking-widest title-font mb-1 my-1">1 Double Bed</h3>
+                            <p class="mt-1 roomtext">Rs 4500</p>
+                            <input type="submit" class="lckg text-white details" value="See Detail">
+                            <!-- <button type="button" class="lckg text-white details">See Detail</button> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+
+</body>
+
+</html>

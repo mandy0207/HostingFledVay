@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navhead {
+    background: rgb(253, 253, 253);
+    position: sticky;
+}
+
+.navtext {
+    color: rgb(54, 54, 133);
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.anchor {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+}
+
+.anchor:hover {
+    color: rgb(54, 54, 133);
+}
+
+.logo {
+    width: 50px;
+    margin-top: 8px;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 420px;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('../static/pics/bedroom.jpg') no-repeat center center/cover;
+    height: 600px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+}
+
+.roomtext {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: black;
+}
+
+.testhead {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+    color: black;
+}
+
+.photo {
+    background: url("../static/pics/picb.jpg")no-repeat center center/cover;
+}
+
+.photo1 {
+    margin-top: 25px;
+    background: url("../static/pics/grey.jpg")no-repeat center center/cover;
+}
+
+.photo3 {
+    background: rgb(190, 190, 240);
+}
+
+.bckg {
+    background: rgb(54, 54, 133);
+    border-radius: 0%;
+}
+
+
+/* Css for Drop down */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdowntext {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdowntext:hover {
+    color: rgb(54, 54, 133);
+}
+
+.lckg {
+    margin-top: 5px;
+    height: 40px;
+    width: 100px;
+    color: white;
+    border-radius: 0%;
+    background: rgb(54, 54, 133);
+    border-radius: 0%;
+}
