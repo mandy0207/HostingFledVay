@@ -27,7 +27,7 @@ app.use(
 );
 app.use(bodyParser.json());
 
-const port = 3600;
+const port = process.env.PORT || 3600;
 // Express Specific stuff
 app.use('/static', express.static('static'));;
 app.use(express.urlencoded());
