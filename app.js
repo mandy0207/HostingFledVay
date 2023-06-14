@@ -39,10 +39,10 @@ app.set('views', path.join(__dirname, 'views'))
 
 
 var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'fledvay'
+    host: 'bxtdncvdjdctgohkfhq4-mysql.services.clever-cloud.com',
+    user: 'ujb4ac13pghtcbn2',
+    password: 'eC36P3EBqDxWlHskPDFj',
+    database: 'bxtdncvdjdctgohkfhq4'
 })
 
 connection.connect(function(err) {
