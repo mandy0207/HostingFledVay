@@ -100,7 +100,7 @@ app.get('*', (req, res) => {
 app.post('/AjaxDetails', (req, res) => {
     params = req.body;
     console.log(params);
-    var insertquery = `SELECT AVG(rating) AS Average FROM Rating where Hotel_Name='${params.name}'`;
+    var insertquery = `SELECT AVG(rating) AS Average FROM rating where Hotel_Name='${params.name}'`;
     //console.log(params.name, params.destination, params.address, params.image);
     connection.query(insertquery, function(err, response) {
         if (err) throw err
